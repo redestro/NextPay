@@ -1,0 +1,13 @@
+version: "3"
+services:
+  zeronet:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    expose:
+      - "8000"
+    environment:
+      - NEXTPAY_ENVIRONMENT=dev
+      - NEXTPAY_ENDPOINT=http://localhost:8000
